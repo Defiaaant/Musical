@@ -72,13 +72,13 @@ def seletor(event):
 
   if not Memoria_musical:
     b1=Button(frame2, text= 'musga q tiago vai por (1)', command=NONE).pack(side='bottom')
-    b2=Button(frame2, text= 'musga q tiago vai por (2)', command=NONE).pack(side='bottom')
-    b3=Button(frame2, text= 'musga q tiago vai por (3)', command=NONE).pack(side='bottom')
+    b2=Button(frame2, text= 'Sound_Track', command= lambda: musica1.Sound_Track()).pack(side='bottom')
+    b3=Button(frame2, text= 'twinkle_twinkle_little_star', command= lambda: musica1.twinkle_twinkle_little_star()).pack(side='bottom')
     b4=Button(frame2, text= 'Parabéns pra você', command= lambda: musica1.parabens()).pack(side='bottom')
   else:
     b1=Button(frame2, text= 'musga q tiago vai por (1)', command=NONE).pack(side='bottom')
-    b2=Button(frame2, text= 'musga q tiago vai por (2)', command=NONE).pack(side='bottom')
-    b3=Button(frame2, text= 'musga q tiago vai por (3)', command=NONE).pack(side='bottom')
+    b2=Button(frame2, text= 'Sound_Track', command= lambda: musica1.Sound_Track()).pack(side='bottom')
+    b3=Button(frame2, text= 'twinkle_twinkle_little_star', command= lambda: musica1.twinkle_twinkle_little_star()).pack(side='bottom')
     b4=Button(frame2, text= 'Parabéns pra você', command= lambda: musica1.parabens()).pack(side='bottom')
 
     for nome_musica in Memoria_musical.keys():
