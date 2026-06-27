@@ -1,7 +1,14 @@
 import time
 import os
-from Piano import tocar_som
-from Piano import notas
+import pygame
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+notas = os.path.join(base_dir, "Notas")
+
+def tocar_som(entrada):
+  nota = pygame.mixer.Sound(entrada)
+  nota.play()
+
 def parabens():
   tocar_som(os.path.join(notas, "g1.wav"))
   time.sleep(0.53)
