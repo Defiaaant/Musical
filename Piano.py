@@ -4,11 +4,27 @@ import time
 import threading
 import pygame
 import musica1
+import json
 
 Gravando = False
 Tempo_inicial = 0
 Gravação_atual = []
 Memoria_musical = {}
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+notas =  os.path.join(base_dir, 'notas')
+Salvar_notas = os.path.join(base_dir, 'musicas_salvas')
+
+def carregar_musicas_memoria():
+   global Memoria_musical
+   if os.path.exists(Salvar_notas):
+      try:
+         with open(Salvar_notas, 'r', encoding='utf-8') as arquivo:
+            Memoria_musical = json.load(arquivo)
+      except:
+         Memoria_musical = {}
+
+carregar_musicas_memoria()
 
 #----------------------------------------------------------------------
 def tocar_som(entrada):
@@ -37,6 +53,13 @@ def alternar_gravacao():
             nome = simpledialog.askstring('Salvar', 'Nome da musica:')
             if nome:
                 Memoria_musical[nome.strip()] = Gravação_atual
+
+                try:
+                    with open(Salvar_notas, 'w', encoding= 'utf-8') as arquivo:
+                        json.dump(Memoria_musical, arquivo, indent= 4)
+                except Exception as e:
+                   print('Erro ao salvar:', e)
+                   
 def tocar_da_memoria(nome_musica):
     def toca_musica():
             reprodutor = pygame.mixer.Channel(1)
