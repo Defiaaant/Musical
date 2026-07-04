@@ -134,6 +134,7 @@ root.iconphoto(True, img)
 root.config(background="#484886")
 
 frame=Frame(root, relief=FLAT)
+bl=Frame(root, relief=FLAT)
 
 Pyano=Label(root, image=img,
             text ='PYANO',
@@ -194,7 +195,15 @@ Do_ = Button(frame, image=branca, text='Do#', compound='center',
              command=lambda :tocar_som(os.path.join(notas, "c2.wav"))).pack(side=LEFT)
 #------------------------------------------
 
-frame.pack(padx=100, pady=100)
+#------------------ AQUIIII TIAGOOOO YUHUUUUUUUUUUUUL ------------------------
+notax = Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+             width=15, height=65,
+             bg='#484886' ,activebackground="#484886", activeforeground="#484886",
+             relief='flat',
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT)
+
+bl.pack()
+frame.pack(padx=20)
 
 botao = Button(root, text = 'Clique aqui para gravar ou parar de gravar a sua m√∫sica',
                 command = alternar_gravacao, relief= 'flat',
@@ -202,6 +211,6 @@ botao = Button(root, text = 'Clique aqui para gravar ou parar de gravar a sua m√
                 activebackground='#c3ba67', activeforeground='#000000', border=2,
                 padx=1, pady=1,
                 font = ('Eczar', 15, 'bold'))
-botao.pack(pady=5)
+botao.pack(pady=10)
 
 root.mainloop()
