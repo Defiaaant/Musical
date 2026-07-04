@@ -3,7 +3,7 @@ import os
 import time
 import threading
 import pygame
-import musica1
+import repertório
 import json
 
 Gravando = False
@@ -74,13 +74,12 @@ def tocar_da_memoria(nome_musica):
 
     threading.Thread(target = toca_musica, daemon = True).start()
  
-
 def seletor(event):
   janela = Toplevel()
   janela.config(background='#484886')
   janela.geometry('700x500')
 
-  retorno=Button(janela, image=voltar, width=30, height=30,
+  retorno=Button(janela, image=voltar, width=50, height=50,
                  bg='#484886',
                  activebackground="#484886", activeforeground="#484886",
                  relief='flat',
@@ -91,23 +90,23 @@ def seletor(event):
         font=("Arial",12, 'bold'),
         fg="#ffffff", bg='#484886').pack(anchor='center')
 
-  frame2=Frame(janela, relief=FLAT)
+  frame2=Frame(janela, relief=FLAT, bg='#484886')
 
   if not Memoria_musical:
-    b1=Button(frame2, text= 'musga q tiago vai por (1)', command=NONE).pack(side='bottom')
-    b2=Button(frame2, text= 'musga q tiago vai por (2)', command=NONE).pack(side='bottom')
-    b3=Button(frame2, text= 'musga q tiago vai por (3)', command=NONE).pack(side='bottom')
-    b4=Button(frame2, text= 'Parabéns pra você', command= lambda: musica1.parabens()).pack(side='bottom')
+
+    b=Button(frame2, text= 'Soundtrack', command=lambda: repertório.Sound_Track()).pack(side='bottom')
+    b_=Button(frame2, text= 'Brilha brilha estrelinha', command=lambda: repertório.twinkle_twinkle_little_star()).pack(side='bottom')
+    b_b=Button(frame2, text= 'Parabéns pra você', command= lambda: repertório.parabens()).pack(side='bottom')
   else:
-    b1=Button(frame2, text= 'musga q tiago vai por (1)', command=NONE).pack(side='bottom')
-    b2=Button(frame2, text= 'musga q tiago vai por (2)', command=NONE).pack(side='bottom')
-    b3=Button(frame2, text= 'musga q tiago vai por (3)', command=NONE).pack(side='bottom')
-    b4=Button(frame2, text= 'Parabéns pra você', command= lambda: musica1.parabens()).pack(side='bottom')
+ 
+    b=Button(frame2, text= 'Soundtrack', command=lambda: repertório.Sound_Track()).pack(side='bottom')
+    b_=Button(frame2, text= 'Brilha brilha estrelinha', command= lambda: repertório.twinkle_twinkle_little_star()).pack(side='bottom')
+    b_b=Button(frame2, text= 'Parabéns pra você', command= lambda: repertório.parabens()).pack(side='bottom')
 
     for nome_musica in Memoria_musical.keys():
         Button(frame2, text=f"{nome_musica}", command=lambda n=nome_musica: tocar_da_memoria(n)).pack(side='bottom', fill='x', pady=2)
 
-  frame2.pack(padx=100, pady=100)
+  frame2.pack(padx=70, pady=70)
 
 pygame.mixer.init()
 
@@ -132,7 +131,7 @@ preta = PhotoImage(file='t_preta.png')
 
 root.iconphoto(True, img)
 
-root.config(width=800, height=500, background="#484886")
+root.config(background="#484886")
 
 frame=Frame(root, relief=FLAT)
 
@@ -146,49 +145,49 @@ Pyano=Label(root, image=img,
 Pyano.pack(anchor='center')
 
 #------------------------------------------
-Do = Button(frame, image=branca,
+Do = Button(frame, image=branca,text='Do', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Re = Button(frame, image=branca,
+Re = Button(frame, image=branca, text= 'Re', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "d1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Mi = Button(frame, image=branca,
+Mi = Button(frame, image=branca, text='Mi', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "e1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Fa = Button(frame, image=branca,
+Fa = Button(frame, image=branca, text='Fa', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "f1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Sol = Button(frame, image=branca,
+Sol = Button(frame, image=branca, text= 'Sol', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "g1.wav"))).pack(side=LEFT)
 #------------------------------------------
-La = Button(frame, image=branca,
+La = Button(frame, image=branca, text='La', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "a1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Si = Button(frame, image=branca,
+Si = Button(frame, image=branca, text= 'Si', compound='center',
              width=30, height=130, 
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "b1.wav"))).pack(side=LEFT)
 #------------------------------------------
-Do_ = Button(frame, image=branca,
+Do_ = Button(frame, image=branca, text='Do#', compound='center',
              width=30, height=130,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
