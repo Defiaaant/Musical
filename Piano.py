@@ -134,7 +134,7 @@ root.iconphoto(True, img)
 root.config(background="#484886")
 
 frame=Frame(root, relief=FLAT)
-bl=Frame(root, relief=FLAT)
+bl=Frame(root, relief=FLAT, bg="#484886")
 
 Pyano=Label(root, image=img,
             text ='PYANO',
@@ -196,14 +196,38 @@ Do_ = Button(frame, image=branca, text='Do#', compound='center',
 #------------------------------------------
 
 #------------------ AQUIIII TIAGOOOO YUHUUUUUUUUUUUUL ------------------------
-notax = Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT)
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT, padx=1)
+
+Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+             width=15, height=65,
+             bg='#484886' ,activebackground="#484886", activeforeground="#484886",
+             relief='flat',
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT, padx=1)
+
+Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+             width=15, height=65,
+             bg='#484886' ,activebackground="#484886", activeforeground="#484886",
+             relief='flat',
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT, padx=15)
+
+Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+             width=15, height=65,
+             bg='#484886' ,activebackground="#484886", activeforeground="#484886",
+             relief='flat',
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT, padx=1)
+
+Button(bl, image=preta, text=':D', fg='#ffffff', compound='center',
+             width=15, height=65,
+             bg='#484886' ,activebackground="#484886", activeforeground="#484886",
+             relief='flat',
+             command=lambda :tocar_som(os.path.join(notas, "c1.wav"))).pack(side=LEFT, padx=1)
 
 bl.pack()
-frame.pack(padx=20)
+frame.pack(padx=10)
 
 botao = Button(root, text = 'Clique aqui para gravar ou parar de gravar a sua música',
                 command = alternar_gravacao, relief= 'flat',
