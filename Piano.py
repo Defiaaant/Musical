@@ -119,7 +119,7 @@ root = Tk()
 root.geometry('700x600')
 
 logo = PhotoImage(file='logo.png')
-img = PhotoImage(file='pyano.png')
+img = PhotoImage(file='pyano_logo.png')
 voltar = PhotoImage(file='voltar.png')
 lista=PhotoImage(file='lista.png')
 
