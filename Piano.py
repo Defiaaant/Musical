@@ -118,6 +118,7 @@ notas = os.path.join(base_dir, "Notas")
 root = Tk()
 root.geometry('700x600')
 
+logo = PhotoImage(file='logo.png')
 img = PhotoImage(file='pyano.png')
 voltar = PhotoImage(file='voltar.png')
 lista=PhotoImage(file='lista.png')
@@ -136,14 +137,16 @@ root.config(background="#484886")
 frame=Frame(root, relief=FLAT)
 bl=Frame(root, relief=FLAT, bg="#484886")
 
-Pyano=Label(root, image=img,
-            text ='PYANO',
-            font=('Lato', 50),
-            background="#484886",
-            compound='right',
-            border=4, padx= 4, pady= 4,
-            relief='flat')
-Pyano.pack(anchor='center')
+Pyano=Frame(root, relief=FLAT, bg="#484886")
+Label(Pyano, image=img,
+        background="#484886",
+        border=4, padx= 4, pady= 4,
+        relief='flat').pack(side=LEFT)
+Label(Pyano, image=logo,
+        background="#484886",
+        padx= 4, height=100,
+        relief='flat').pack(side=RIGHT)
+Pyano.pack(anchor='center', pady=20)
 
 
 '''Teclas Brancas'''
