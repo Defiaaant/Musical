@@ -276,18 +276,13 @@ Si__ = Button(frame, image=branca, text='B3', compound='center',
              command=lambda :tocar_som(os.path.join(notas, "b3.wav"))).pack(side=LEFT)
 #------------------------------------------
 
-
-
 '''Teclas pretas '''
 
-
-#------------------ AQUIIII TIAGOOOO YUHUUUUUUUUUUUUL ------------------------
 Button(bl, image=preta, text='CD1', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "cd1.wav"))).pack(side=LEFT, padx=15)
-
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='DE1', fg='#ffffff', compound='center',
              width=15, height=65,
@@ -377,12 +372,6 @@ Button(bl, image=preta, text='AB3', fg='#ffffff', compound='center',
              relief='flat',
              command=lambda :tocar_som(os.path.join(notas, "ab3.wav"))).pack(side=LEFT, padx=15)
 #----------------------------------------------------------------------------
-
-
-
-
-
-
 
 bl.pack()
 frame.pack(padx=10)
