@@ -276,22 +276,19 @@ Si__ = Button(frame, image=branca, text='B3', compound='center',
              command=lambda :tocar_som(os.path.join(notas, "b3.wav"))).pack(side=LEFT)
 #------------------------------------------
 
-
-
 '''Teclas pretas '''
 
-#------------------ AQUIIII TIAGOOOO YUHUUUUUUUUUUUUL ------------------------
 Button(bl, image=preta, text='CD1', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "cd1.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "cd1.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='DE1', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "de1.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "de1.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='FG1', fg='#ffffff', compound='center',
              width=15, height=65,
@@ -303,13 +300,13 @@ Button(bl, image=preta, text='GA1', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ga1.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "ga1.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='AB1', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ab1.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "ab1.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
@@ -317,13 +314,13 @@ Button(bl, image=preta, text='CD2', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "cd2.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "cd2.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='DE2', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "de2.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "de2.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='FG2', fg='#ffffff', compound='center',
              width=15, height=65,
@@ -335,13 +332,13 @@ Button(bl, image=preta, text='GA2', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ga2.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "ga2.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='AB2', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ab2.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "ab2.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
@@ -349,13 +346,13 @@ Button(bl, image=preta, text='CD3', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "cd3.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "cd3.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='DE3', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "de3.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "de3.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='FG3', fg='#ffffff', compound='center',
              width=15, height=65,
@@ -367,20 +364,14 @@ Button(bl, image=preta, text='GA3', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ga3.wav"))).pack(side=LEFT, padx=1)
+             command=lambda :tocar_som(os.path.join(notas, "ga3.wav"))).pack(side=LEFT, padx=15)
 #-----------------------------------------------------------------------------
 Button(bl, image=preta, text='AB3', fg='#ffffff', compound='center',
              width=15, height=65,
              bg='#484886' ,activebackground="#484886", activeforeground="#484886",
              relief='flat',
-             command=lambda :tocar_som(os.path.join(notas, "ab3.wav"))).pack(side=LEFT, padx=1)
-#-----------------------------------------------------------------------------
-
-
-
-
-
-
+             command=lambda :tocar_som(os.path.join(notas, "ab3.wav"))).pack(side=LEFT, padx=15)
+#----------------------------------------------------------------------------
 
 bl.pack()
 frame.pack(padx=10)
